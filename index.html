@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ค่ายปีใหม่ 2027 · HIM Phuping</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;600;700&family=Sarabun:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f0f4f8;--card:#fff;--alt:#f8fafc;--ink:#051650;--text:#374151;--muted:#5b6678;--navy:#0a2472;--navy9:#051650;--blue:#2563eb;--teal:#06d6a0;--line:#e2e8f0;--tint:#ebf5fb;--ok:#047857;--okbg:#d1fae9;--warn:#b45309;--warnbg:#fef3c7}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 'Sarabun',system-ui,sans-serif}
+h1,h2,h3{font-family:'Kanit',sans-serif;color:var(--ink);margin:0;line-height:1.3}
+button,input,select,textarea{font:inherit}
+.top{background:var(--navy9);color:#fff;padding:20px max(4vw,16px) 0}
+.top .kick{color:var(--teal);font-weight:600;font-size:14px}
+.top h1{color:#fff;font-size:clamp(24px,4vw,34px)}
+.top .meta{color:#c9d6f2;font-size:15px;margin:4px 0 14px}
+.tabs{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.tabs button{flex:none;background:none;border:0;color:#c9d6f2;padding:12px 16px;min-height:44px;border-radius:10px 10px 0 0;cursor:pointer;font-weight:600}
+.tabs button[aria-selected=true]{background:var(--bg);color:var(--ink)}
+main{max-width:1180px;margin:0 auto;padding:20px max(4vw,16px) 60px}
+section[hidden]{display:none}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.kpi{background:var(--navy);color:#fff;border-radius:12px;padding:14px 16px}
+.kpi .l{font-size:14px;color:#c9d6f2}.kpi .n{font:700 34px/1.15 'Kanit',sans-serif}
+.kpi .s{font-size:13px;color:#a9f0d9}
+.card{background:var(--card);border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.06);padding:18px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:16px}
+.h2row{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin:26px 0 10px;flex-wrap:wrap}
+.h2row h2{font-size:22px}.muted{color:var(--muted);font-size:14px}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th{background:var(--navy);color:#fff;font-weight:600;text-align:left;padding:8px 10px}
+td{padding:8px 10px;border-bottom:1px solid var(--line)}
+tr:nth-child(even) td{background:var(--alt)}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.bar{height:8px;background:var(--tint);border-radius:9px;overflow:hidden;min-width:60px}
+.bar i{display:block;height:100%;background:var(--teal)}
+.scroll{overflow-x:auto}
+.stat{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line)}
+.stat b{color:var(--ink);font-variant-numeric:tabular-nums}
+.day{margin-top:18px}.day h3{font-size:19px;margin-bottom:6px}
+.slot{display:grid;grid-template-columns:120px minmax(0,1fr);gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.slot .t{font:600 16px 'Kanit',sans-serif;color:var(--blue);white-space:nowrap}
+.slot .w{font-size:14px;color:var(--muted)}
+/* registration */
+.gate{max-width:420px;margin:30px auto;text-align:center}
+.gate input{width:100%;font-size:22px;text-align:center;letter-spacing:6px;padding:12px;border:2px solid var(--line);border-radius:12px;margin:14px 0}
+.btn{background:var(--blue);color:#fff;border:0;border-radius:10px;padding:10px 18px;min-height:44px;font-weight:600;cursor:pointer}
+.btn.ghost{background:#fff;color:var(--blue);border:2px solid var(--blue)}
+.btn:focus-visible,.tg:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible,.tabs button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.filters{display:grid;grid-template-columns:1fr 1.4fr 1.4fr;gap:10px}
+.filters select,.filters input,.f select,.f input,.f textarea{width:100%;border:1px solid #cbd5e1;border-radius:10px;padding:9px 10px;min-height:44px;background:#fff;color:var(--ink);font-size:16px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.chip{border:1px solid #cbd5e1;background:#fff;border-radius:999px;padding:6px 14px;min-height:36px;cursor:pointer;font-size:15px;color:var(--ink)}
+.chip[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.lgsum{display:flex;gap:16px;flex-wrap:wrap;font-size:15px;margin-bottom:8px}.lgsum b{color:var(--ink)}
+.person{background:#fff;border-radius:12px;margin-bottom:10px;box-shadow:0 1px 3px rgba(0,0,0,.06);border-left:0}
+.person.c{box-shadow:inset 4px 0 0 var(--teal),0 1px 3px rgba(0,0,0,.06)}
+.prow{display:flex;align-items:center;gap:10px;padding:10px 12px}
+.pname{flex:1;cursor:pointer;background:none;border:0;text-align:left;padding:4px 0;color:var(--ink)}
+.pname b{font-weight:600}.pname small{display:block;color:var(--muted);font-size:13px}
+.tg{display:flex;align-items:center;gap:6px;border:2px solid #cbd5e1;background:#fff;border-radius:10px;padding:6px 10px;min-height:44px;cursor:pointer;color:var(--muted);font-size:14px;font-weight:600;white-space:nowrap}
+.tg[aria-pressed=true]{border-color:var(--blue);background:var(--blue);color:#fff}
+.tg.cf[aria-pressed=true]{border-color:var(--ok);background:var(--ok)}
+.tg svg{width:18px;height:18px}
+.badge{font-size:12px;border-radius:999px;padding:2px 8px;white-space:nowrap}
+.b-no{background:#f1f5f9;color:#475569}.b-wait{background:var(--warnbg);color:var(--warn)}.b-ok{background:var(--okbg);color:var(--ok)}.b-new{background:var(--tint);color:var(--blue)}
+.detail{border-top:1px solid var(--line);padding:12px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 12px}
+.f label{display:block;font-size:13px;color:var(--muted);margin-bottom:2px}
+.f.w2{grid-column:span 2}.f.w3{grid-column:1/-1}
+.staff{background:var(--tint);border-radius:10px;padding:10px;grid-column:1/-1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.saved{font-size:13px;color:var(--ok);grid-column:1/-1;min-height:18px}
+.saved.err{color:#b91c1c}
+.addbox{display:grid;grid-template-columns:2fr 1fr auto;gap:10px;align-items:end;margin-top:14px}
+.empty{padding:30px;text-align:center;color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 18px;border-radius:10px;font-size:15px;opacity:0;transition:opacity .2s;pointer-events:none}
+.toast.on{opacity:1}
+.loading{color:var(--muted);padding:20px 0}
+@media(max-width:760px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.grid2{grid-template-columns:1fr}.filters{grid-template-columns:1fr}.detail{grid-template-columns:repeat(2,minmax(0,1fr))}.staff{grid-template-columns:repeat(2,minmax(0,1fr))}.addbox{grid-template-columns:1fr}.slot{grid-template-columns:96px minmax(0,1fr)}}
+@media(max-width:440px){.prow{flex-wrap:wrap}.pname{flex-basis:100%}.detail{grid-template-columns:1fr}.f.w2{grid-column:auto}}
+@media(prefers-reduced-motion:reduce){.toast{transition:none}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="kick">HIM Phuping NEW YEAR CAMP 2027</div>
+  <h1>ค่ายปีใหม่ 2027</h1>
+  <div class="meta" id="meta">ศุกร์ 8 – เสาร์ 9 ม.ค. 2027 · จ.เชียงใหม่</div>
+  <nav class="tabs" role="tablist" id="tabs">
+    <button role="tab" data-t="overview" aria-selected="true">ภาพรวม</button>
+    <button role="tab" data-t="register" aria-selected="false">ลงทะเบียน</button>
+    <button role="tab" data-t="program" aria-selected="false">โปรแกรม</button>
+    <button role="tab" data-t="rooms" aria-selected="false">ห้องพัก</button>
+    <button role="tab" data-t="cars" aria-selected="false">รถ</button>
+    <button role="tab" data-t="groups" aria-selected="false">กลุ่มกิจกรรม</button>
+  </nav>
+</header>
+<main>
+  <section id="overview"><div class="loading">กำลังโหลด…</div></section>
+  <section id="register" hidden>
+    <div class="gate card" id="gate">
+      <h2>สำหรับหัวหน้า LG และทีมงาน</h2>
+      <p class="muted">ใส่รหัสที่ได้รับจากฝ่ายอภิบาล</p>
+      <form id="gateForm"><input id="pin" inputmode="numeric" autocomplete="off" aria-label="รหัส" maxlength="10"><button class="btn" type="submit">เข้าสู่หน้าลงทะเบียน</button></form>
+      <p class="muted" id="gateMsg"></p>
+    </div>
+    <div id="regApp" hidden>
+      <div class="filters">
+        <select id="fUnit" aria-label="หน่วย"></select>
+        <select id="fLg" aria-label="LG"></select>
+        <input id="fQ" type="search" placeholder="ค้นหาชื่อ / ชื่อเล่น" aria-label="ค้นหา">
+      </div>
+      <div class="chips" id="chips">
+        <button class="chip" data-v="all" aria-pressed="true">ทั้งหมด</button>
+        <button class="chip" data-v="intend" aria-pressed="false">ตั้งใจเข้าร่วม</button>
+        <button class="chip" data-v="confirm" aria-pressed="false">ยืนยันแล้ว</button>
+        <button class="chip" data-v="unpaid" aria-pressed="false">ยืนยันแต่ยังไม่ตรวจเงิน</button>
+        <button class="chip" data-v="new" aria-pressed="false">คนใหม่</button>
+      </div>
+      <div class="lgsum" id="lgsum"></div>
+      <div id="list"></div>
+      <div class="card" id="addCard">
+        <h3>เพิ่มคนใหม่ใน <span id="addLg"></span></h3>
+        <form class="addbox" id="addForm">
+          <div class="f"><label for="aName">ชื่อ-สกุล</label><input id="aName" required></div>
+          <div class="f"><label for="aNick">ชื่อเล่น</label><input id="aNick"></div>
+          <button class="btn" type="submit">เพิ่ม</button>
+        </form>
+      </div>
+      <p class="muted" style="margin-top:14px">บันทึกทันทีที่เปลี่ยน · <span id="who"></span> · <button class="chip" id="logout" type="button">ออกจากระบบ</button></p>
+    </div>
+  </section>
+  <section id="program" hidden><div class="loading">กำลังโหลด…</div></section>
+  <section id="rooms" hidden></section>
+  <section id="cars" hidden></section>
+  <section id="groups" hidden></section>
+</main>
+<div class="toast" id="toast" role="status"></div>
+<script>
+{
+const $ = s => document.querySelector(s);
+const esc = v => String(v == null ? '' : v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const num = n => Number(n || 0).toLocaleString('th-TH');
+const CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg>';
+let PUB = null, REGD = null, PIN = '', ROLE = null, open = null, chip = 'all';
+const store = { get(k){ try { return localStorage.getItem(k) || ''; } catch(e){ return ''; } }, set(k,v){ try { v ? localStorage.setItem(k,v) : localStorage.removeItem(k); } catch(e){} } };
+const toast = (m) => { const t = $('#toast'); t.textContent = m; t.classList.add('on'); clearTimeout(toast.h); toast.h = setTimeout(() => t.classList.remove('on'), 2200); };
+const API = 'https://script.google.com/macros/s/AKfycbwVWrUOKzj7fJ-GTRMmkdzIZiavX8V2W8ZUnkbF_W3q_F_8eJ1wmXk7D4oM2lb_fI2P/exec';
+const run = (fn, ...args) => fetch(API, { method: 'POST', credentials: 'omit', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ fn, args }) })
+  .then(r => r.json()).then(j => { if (!j.ok) throw new Error(j.error || 'เกิดข้อผิดพลาด'); return j.data; });
+
+/* tabs */
+const showTab = t => {
+  document.querySelectorAll('#tabs button').forEach(b => b.setAttribute('aria-selected', b.dataset.t === t));
+  document.querySelectorAll('main>section').forEach(s => s.hidden = s.id !== t);
+  if (t === 'register' && !REGD && PIN) login(PIN, true);
+};
+$('#tabs').addEventListener('click', e => { const b = e.target.closest('button'); if (b) showTab(b.dataset.t); });
+
+/* public */
+function renderPublic() {
+  const s = PUB.summary;
+  if (PUB.info && PUB.info.length) $('#meta').textContent = PUB.info.map(r => r[1]).filter(Boolean).slice(0, 2).join(' · ');
+  const pct = (a, b) => b ? Math.round(a / b * 100) : 0;
+  const unitRows = s.units.map(u => `<tr><td>${esc(u.key)}</td><td class="n">${u.total}</td><td class="n">${u.intend}</td><td class="n">${u.confirm}</td><td><div class="bar"><i style="width:${pct(u.confirm,u.total)}%"></i></div></td><td class="n">${u.stay}</td><td class="n">${u.paid}</td></tr>`).join('');
+  const lgRows = s.lgs.map(u => `<tr><td>${esc(u.key)}</td><td>${esc(u.unit)}</td><td class="n">${u.total}</td><td class="n">${u.intend}</td><td class="n">${u.confirm}</td><td class="n">${u.isNew}</td><td class="n">${u.paid}</td></tr>`).join('');
+  $('#overview').innerHTML = `
+    <div class="kpis">
+      <div class="kpi"><div class="l">ตั้งใจเข้าร่วม</div><div class="n">${num(s.intend)}</div><div class="s">จากรายชื่อ ${num(s.total)} คน</div></div>
+      <div class="kpi"><div class="l">ยืนยันแล้ว</div><div class="n">${num(s.confirm)}</div><div class="s">คนใหม่ ${num(s.isNew)} คน</div></div>
+      <div class="kpi"><div class="l">ค้างคืน / ไม่ค้าง</div><div class="n">${num(s.stay)} / ${num(s.noStay)}</div><div class="s">หญิง ${num(s.stayF)} · ชาย ${num(s.stayM)}</div></div>
+      <div class="kpi"><div class="l">จ่ายแล้ว (ตรวจแล้ว)</div><div class="n">${num(s.paid)}</div><div class="s">${num(s.money)} บาท · รอตรวจ ${num(s.waiting)}</div></div>
+    </div>
+    <div class="grid2">
+      <div class="card"><h3>การเดินทาง</h3>
+        <div class="stat"><span>ขอไปรถคริสตจักร</span><b>${num(s.bus)}</b></div>
+        <div class="stat"><span>ไปเอง</span><b>${num(s.self)}</b></div>
+        <div class="stat"><span>ขับไปและรับคนได้</span><b>${num(s.drivers)} คัน · ${num(s.seats)} ที่นั่ง</b></div>
+        <div class="stat"><span>ที่นั่งที่ยังขาด</span><b>${num(Math.max(0, s.bus - s.seats))}</b></div>
+        <div class="stat"><span>ยืนยันแต่ยังไม่ระบุการเดินทาง</span><b>${num(s.noTravel)}</b></div></div>
+      <div class="card"><h3>สุขภาพ (ผู้ยืนยัน)</h3>
+        <div class="stat"><span>มีโรคประจำตัว / ยา</span><b>${num(s.health)}</b></div>
+        <div class="stat"><span>มีข้อมูลแพ้อาหาร</span><b>${num(s.allergy)}</b></div>
+        <p class="muted">รายละเอียดดูได้เฉพาะทีมงานในหน้าลงทะเบียน</p></div>
+    </div>
+    <div class="h2row"><h2>แยกตามหน่วย</h2><span class="muted">อัปเดต ${esc(PUB.updated)}</span></div>
+    <div class="card scroll"><table><thead><tr><th>หน่วย</th><th class="n">รายชื่อ</th><th class="n">ตั้งใจ</th><th class="n">ยืนยัน</th><th>% ยืนยัน</th><th class="n">ค้างคืน</th><th class="n">จ่ายแล้ว</th></tr></thead><tbody>${unitRows}</tbody></table></div>
+    <div class="h2row"><h2>แยกตาม LG</h2></div>
+    <div class="card scroll"><table><thead><tr><th>LG</th><th>หน่วย</th><th class="n">รายชื่อ</th><th class="n">ตั้งใจ</th><th class="n">ยืนยัน</th><th class="n">คนใหม่</th><th class="n">จ่ายแล้ว</th></tr></thead><tbody>${lgRows}</tbody></table></div>`;
+  let day = '', html = '';
+  PUB.program.forEach(r => {
+    if (r[0] && r[0] !== day) { if (day) html += '</div>'; day = r[0]; html += `<div class="card day"><h3>${esc(day)}</h3>`; }
+    html += `<div class="slot"><div class="t">${esc(r[1])}</div><div>${esc(r[2])}${r[3] ? `<div class="w">${esc(r[3])}</div>` : ''}</div></div>`;
+  });
+  if (day) html += '</div>';
+  $('#program').innerHTML = `<div class="h2row"><h2>โปรแกรมร่าง</h2><span class="muted">ปรับได้ตามที่ทีมสรุป</span></div>${html || '<div class="empty">ยังไม่มีโปรแกรม</div>'}`;
+  const tbl = (id, title, note, hdr, rows, numCols) => {
+    $('#' + id).innerHTML = `<div class="h2row"><h2>${title}</h2><span class="muted">${note}</span></div>` + (rows.length
+      ? `<div class="card scroll"><table><thead><tr>${hdr.map((h, i) => `<th class="${numCols.includes(i) ? 'n' : ''}">${h}</th>`).join('')}</tr></thead><tbody>${rows.map(r => `<tr>${hdr.map((h, i) => `<td class="${numCols.includes(i) ? 'n' : ''}">${esc(r[i])}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`
+      : '<div class="empty card">ยังไม่มีข้อมูล</div>');
+  };
+  tbl('rooms', 'ห้องพัก', `ต้องการ: หญิง ${num(s.stayF)} · ชาย ${num(s.stayM)} · รวม ${num(s.stay)} คน`, ['ห้อง', 'ประเภท', 'จุได้', 'จัดแล้ว', 'ว่าง', 'หมายเหตุ'], PUB.rooms, [2, 3, 4]);
+  tbl('cars', 'รถ', `ขอไปรถคริสตจักร ${num(s.bus)} คน`, ['คันรถ', 'ประเภท', 'คนขับ', 'ที่นั่ง', 'จัดแล้ว', 'ว่าง', 'หัวหน้าคันรถ'], PUB.cars, [3, 4, 5]);
+  tbl('groups', 'กลุ่มกิจกรรม', 'คละ LG และหน่วย', ['กลุ่ม', 'ชื่อ / สี', 'พี่เลี้ยงกลุ่ม', 'Trainee', 'สมาชิก', 'ชาย', 'หญิง', 'คนใหม่'], PUB.groups, [4, 5, 6, 7]);
+}
+const loadPublic = () => run('getPublic').then(d => { PUB = d; renderPublic(); }).catch(e => { $('#overview').innerHTML = `<div class="empty">โหลดไม่สำเร็จ: ${esc(e.message || e)}</div>`; });
+
+/* registration */
+function login(pin, silent) {
+  $('#gateMsg').textContent = 'กำลังตรวจรหัส…';
+  return run('getRows', pin).then(d => {
+    PIN = pin; ROLE = d.role; REGD = d; store.set('camp27pin', pin);
+    $('#gate').hidden = true; $('#regApp').hidden = false;
+    $('#who').textContent = ROLE === 'staff' ? 'เข้าใช้ในฐานะทีมงาน' : 'เข้าใช้ในฐานะหัวหน้า LG';
+    initFilters(); renderList();
+  }).catch(e => { $('#gateMsg').textContent = silent ? '' : (e.message || 'รหัสไม่ถูกต้อง'); store.set('camp27pin', ''); PIN = ''; });
+}
+$('#gateForm').addEventListener('submit', e => { e.preventDefault(); login($('#pin').value.trim()); });
+$('#logout').addEventListener('click', () => { store.set('camp27pin', ''); PIN = ''; REGD = null; $('#regApp').hidden = true; $('#gate').hidden = false; $('#gateMsg').textContent = ''; $('#pin').value = ''; });
+
+function initFilters() {
+  const units = [...new Set(REGD.lgs.map(x => x.unit))];
+  const su = store.get('camp27unit'), sl = store.get('camp27lg');
+  $('#fUnit').innerHTML = '<option value="">ทุกหน่วย</option>' + units.map(u => `<option ${u === su ? 'selected' : ''}>${esc(u)}</option>`).join('');
+  fillLg(sl);
+}
+function fillLg(sel) {
+  const u = $('#fUnit').value;
+  const lgs = REGD.lgs.filter(x => !u || x.unit === u);
+  $('#fLg').innerHTML = '<option value="">ทุก LG</option>' + lgs.map(x => `<option ${x.lg === sel ? 'selected' : ''}>${esc(x.lg)}</option>`).join('');
+}
+$('#fUnit').addEventListener('change', () => { store.set('camp27unit', $('#fUnit').value); fillLg(''); store.set('camp27lg', ''); renderList(); });
+$('#fLg').addEventListener('change', () => { store.set('camp27lg', $('#fLg').value); renderList(); });
+$('#fQ').addEventListener('input', () => renderList());
+$('#chips').addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; chip = b.dataset.v; document.querySelectorAll('#chips .chip').forEach(c => c.setAttribute('aria-pressed', c === b)); renderList(); });
+
+const payBadge = p => p === 'ตรวจแล้ว' ? '<span class="badge b-ok">ตรวจเงินแล้ว</span>' : p === 'จ่ายแล้ว รอตรวจ' ? '<span class="badge b-wait">รอตรวจเงิน</span>' : p === 'ยกเว้น/ทุน' ? '<span class="badge b-ok">ยกเว้น/ทุน</span>' : '';
+function visible() {
+  const u = $('#fUnit').value, lg = $('#fLg').value, q = $('#fQ').value.trim().toLowerCase();
+  return REGD.rows.filter(r => String(r.name).trim()).filter(r =>
+    (!u || r.unit === u) && (!lg || r.lg === lg) &&
+    (!q || (r.name + ' ' + r.nick).toLowerCase().includes(q)) &&
+    (chip === 'all' || (chip === 'intend' && r.intend) || (chip === 'confirm' && r.confirm) || (chip === 'new' && r.isNew) || (chip === 'unpaid' && r.confirm && r.pay !== 'ตรวจแล้ว' && r.pay !== 'ยกเว้น/ทุน')));
+}
+function renderList() {
+  const rows = visible();
+  const lg = $('#fLg').value, u = $('#fUnit').value;
+  const scope = REGD.rows.filter(r => String(r.name).trim() && (!u || r.unit === u) && (!lg || r.lg === lg));
+  $('#lgsum').innerHTML = `<span>รายชื่อ <b>${scope.length}</b></span><span>ตั้งใจ <b>${scope.filter(r => r.intend).length}</b></span><span>ยืนยัน <b>${scope.filter(r => r.confirm).length}</b></span><span>ค้างคืน <b>${scope.filter(r => r.confirm && r.stay === 'ค้างคืน').length}</b></span><span>ตรวจเงินแล้ว <b>${scope.filter(r => r.confirm && r.pay === 'ตรวจแล้ว').length}</b></span>`;
+  $('#list').innerHTML = rows.length ? rows.map(personHtml).join('') : '<div class="empty card">ไม่มีรายชื่อตามตัวกรองนี้</div>';
+  $('#addCard').hidden = !lg;
+  $('#addLg').textContent = lg;
+}
+function opt(list, v, blank) { return (blank ? '<option value="">—</option>' : '') + list.map(x => `<option ${x === v ? 'selected' : ''}>${esc(x)}</option>`).join(''); }
+function personHtml(r) {
+  const isOpen = open === r.row;
+  const staff = ROLE === 'staff';
+  const pays = staff ? ['ยังไม่จ่าย', 'จ่ายแล้ว รอตรวจ', 'ตรวจแล้ว', 'ยกเว้น/ทุน'] : (r.pay === 'ตรวจแล้ว' || r.pay === 'ยกเว้น/ทุน' ? [r.pay] : ['ยังไม่จ่าย', 'จ่ายแล้ว รอตรวจ']);
+  const fld = (k, label, input, cls) => `<div class="f ${cls || ''}"><label for="i${r.row}${k}">${label}</label>${input}</div>`;
+  const inp = (k, type, extra) => `<input id="i${r.row}${k}" data-k="${k}" type="${type || 'text'}" value="${esc(r[k])}" ${extra || ''}>`;
+  const sel = (k, list, blank) => `<select id="i${r.row}${k}" data-k="${k}">${opt(list, r[k], blank)}</select>`;
+  return `<div class="person ${r.confirm ? 'c' : ''}" data-row="${r.row}">
+    <div class="prow">
+      <button class="pname" data-act="open" aria-expanded="${isOpen}"><b>${esc(r.name)}</b>${r.nick ? ' (' + esc(r.nick) + ')' : ''}
+        <small>${esc(r.lg)} ${r.isNew ? '<span class="badge b-new">คนใหม่</span>' : ''} ${payBadge(r.pay)} ${r.confirm && r.stay ? '· ' + esc(r.stay) : ''}</small></button>
+      <button class="tg" data-tg="intend" aria-pressed="${r.intend}">${CHECK}ตั้งใจ</button>
+      <button class="tg cf" data-tg="confirm" aria-pressed="${r.confirm}">${CHECK}ยืนยัน</button>
+    </div>
+    ${isOpen ? `<div class="detail">
+      ${fld('name', 'ชื่อ-สกุล', inp('name'), 'w2')}${fld('nick', 'ชื่อเล่น', inp('nick'))}
+      ${fld('sex', 'เพศ', sel('sex', ['หญิง', 'ชาย'], true))}${fld('age', 'อายุ', inp('age', 'number', 'min="0" max="120"'))}
+      ${fld('phone', 'เบอร์โทร', inp('phone', 'tel'))}
+      ${fld('stay', 'การพัก', sel('stay', ['ค้างคืน', 'ไม่ค้าง'], true))}
+      ${fld('travel', 'การเดินทาง', sel('travel', ['รถคริสตจักร', 'ไปเอง', 'ขับไป-รับคนได้'], true))}
+      ${fld('seats', 'ที่นั่งว่าง (ถ้าขับไป)', inp('seats', 'number', 'min="0" max="15"'))}
+      ${fld('emergency', 'ผู้ติดต่อฉุกเฉิน (ชื่อ/เบอร์)', inp('emergency'), 'w3')}
+      ${fld('health', 'โรคประจำตัว / ยา', inp('health'), 'w2')}${fld('allergy', 'แพ้อาหาร / ทานไม่ได้', inp('allergy'))}
+      ${fld('fee', 'ค่าลงทะเบียน (บาท)', inp('fee', 'number', 'min="0"'))}${fld('pay', 'สถานะจ่ายเงิน', sel('pay', pays))}
+      ${fld('isNew', 'คนใหม่', `<select id="i${r.row}isNew" data-k="isNew"><option value="false" ${!r.isNew ? 'selected' : ''}>ไม่ใช่</option><option value="true" ${r.isNew ? 'selected' : ''}>ใช่</option></select>`)}
+      ${fld('note', 'หมายเหตุ', inp('note'), 'w3')}
+      ${staff ? `<div class="staff">
+        ${fld('paidOn', 'วันที่จ่าย', inp('paidOn', 'date'))}
+        ${fld('room', 'ห้องพัก', sel('room', REGD.rooms, true))}
+        ${fld('car', 'คันรถ', sel('car', REGD.cars, true))}
+        ${fld('group', 'กลุ่มกิจกรรม', sel('group', REGD.groups, true))}</div>` : ''}
+      <div class="saved" id="s${r.row}" aria-live="polite"></div>
+    </div>` : ''}
+  </div>`;
+}
+const findRow = row => REGD.rows.find(r => r.row === row);
+function save(row, key, value, prevName) {
+  const r = findRow(row);
+  const msg = document.getElementById('s' + row);
+  if (msg) { msg.className = 'saved'; msg.textContent = 'กำลังบันทึก…'; }
+  return run('saveField', PIN, row, prevName != null ? prevName : r.name, key, value).then(nr => {
+    Object.assign(r, nr);
+    const m2 = document.getElementById('s' + row); if (m2) { m2.className = 'saved'; m2.textContent = 'บันทึกแล้ว'; }
+    if (key === 'intend' || key === 'confirm' || key === 'pay' || key === 'stay' || key === 'name' || key === 'nick' || key === 'isNew') rerenderPerson(row);
+    refreshSumSoon();
+  }).catch(e => {
+    toast(e.message || 'บันทึกไม่สำเร็จ');
+    const m2 = document.getElementById('s' + row); if (m2) { m2.className = 'saved err'; m2.textContent = e.message || 'บันทึกไม่สำเร็จ'; }
+    rerenderPerson(row);
+  });
+}
+function rerenderPerson(row) {
+  const el = document.querySelector(`.person[data-row="${row}"]`);
+  if (!el) return;
+  const active = document.activeElement && document.activeElement.dataset && document.activeElement.dataset.k;
+  el.outerHTML = personHtml(findRow(row));
+  if (active) { const f = document.getElementById('i' + row + active); if (f) f.focus(); }
+  const lg = $('#fLg').value, u = $('#fUnit').value;
+  const scope = REGD.rows.filter(r => String(r.name).trim() && (!u || r.unit === u) && (!lg || r.lg === lg));
+  $('#lgsum').innerHTML = `<span>รายชื่อ <b>${scope.length}</b></span><span>ตั้งใจ <b>${scope.filter(r => r.intend).length}</b></span><span>ยืนยัน <b>${scope.filter(r => r.confirm).length}</b></span><span>ค้างคืน <b>${scope.filter(r => r.confirm && r.stay === 'ค้างคืน').length}</b></span><span>ตรวจเงินแล้ว <b>${scope.filter(r => r.confirm && r.pay === 'ตรวจแล้ว').length}</b></span>`;
+}
+let sumT;
+const refreshSumSoon = () => { clearTimeout(sumT); sumT = setTimeout(loadPublic, 4000); };
+$('#list').addEventListener('click', e => {
+  const p = e.target.closest('.person'); if (!p) return;
+  const row = Number(p.dataset.row), r = findRow(row);
+  const tg = e.target.closest('[data-tg]');
+  if (tg) {
+    const k = tg.dataset.tg, v = !r[k];
+    r[k] = v; tg.setAttribute('aria-pressed', v);
+    if (k === 'confirm' && v && !r.intend) { r.intend = true; save(row, 'intend', true); }
+    save(row, k, v);
+    return;
+  }
+  if (e.target.closest('[data-act=open]')) { open = open === row ? null : row; renderList(); }
+});
+$('#list').addEventListener('change', e => {
+  const k = e.target.dataset.k; if (!k) return;
+  const row = Number(e.target.closest('.person').dataset.row), r = findRow(row);
+  let v = e.target.value;
+  if (k === 'isNew') v = v === 'true';
+  if (k === 'name' && !v.trim()) { toast('ชื่อห้ามว่าง'); e.target.value = r.name; return; }
+  const prevName = r.name;
+  save(row, k, v, prevName);
+});
+$('#addForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const lg = $('#fLg').value; const meta = REGD.lgs.find(x => x.lg === lg);
+  const name = $('#aName').value.trim(); if (!name || !meta) return;
+  run('addPerson', PIN, meta.unit, lg, name, $('#aNick').value.trim()).then(nr => {
+    const ex = findRow(nr.row); if (ex) Object.assign(ex, nr); else REGD.rows.push(nr);
+    $('#aName').value = ''; $('#aNick').value = ''; open = nr.row; renderList(); toast('เพิ่ม ' + name + ' แล้ว'); refreshSumSoon();
+  }).catch(err => toast(err.message || 'เพิ่มไม่สำเร็จ'));
+});
+
+loadPublic();
+PIN = store.get('camp27pin');
+}
+</script>
+</body>
+</html>
