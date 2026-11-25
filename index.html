@@ -45,7 +45,7 @@ td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 .slot .w{font-size:14px;color:var(--muted)}
 /* registration */
 .gate{max-width:420px;margin:30px auto;text-align:center}
-.gate input{width:100%;font-size:22px;text-align:center;letter-spacing:6px;padding:12px;border:2px solid var(--line);border-radius:12px;margin:14px 0}
+.gate input{width:100%;font-size:22px;text-align:center;letter-spacing:1px;padding:12px;border:2px solid var(--line);border-radius:12px;margin:14px 0}
 .btn{background:var(--blue);color:#fff;border:0;border-radius:10px;padding:10px 18px;min-height:44px;font-weight:600;cursor:pointer}
 .btn.ghost{background:#fff;color:var(--blue);border:2px solid var(--blue)}
 .btn:focus-visible,.tg:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible,.tabs button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
@@ -102,7 +102,7 @@ td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
     <div class="gate card" id="gate">
       <h2>สำหรับหัวหน้า LG และทีมงาน</h2>
       <p class="muted">ใส่รหัสที่ได้รับจากฝ่ายอภิบาล</p>
-      <form id="gateForm"><input id="pin" inputmode="numeric" autocomplete="off" aria-label="รหัส" maxlength="10"><button class="btn" type="submit">เข้าสู่หน้าลงทะเบียน</button></form>
+      <form id="gateForm"><input id="pin" type="text" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" aria-label="รหัส" maxlength="30"><button class="btn" type="submit">เข้าสู่หน้าลงทะเบียน</button></form>
       <p class="muted" id="gateMsg"></p>
     </div>
     <div id="regApp" hidden>
